@@ -14,8 +14,8 @@ test ('test addition', t => {
 })
 
 test('test currency', t => {
-  t.is("USD", oneDollar.currency())
-  t.is("CHF", oneFranc.currency())
+  t.is("USD", oneDollar.currency)
+  t.is("CHF", oneFranc.currency)
 })
 
 test('stringify', t => {
@@ -37,7 +37,7 @@ test('test multi-currency multiplication', t => {
   let result = fiveDollars.times(2)
 
   t.true(result.amount === 10)
-  t.is("USD", result.currency())
+  t.is("USD", result.currency)
   t.true(Money.dollar(10).amount === 10)
   t.true(result.equals(fiveDollars.times(2)))
   t.true(result.equals(Money.dollar(10)))
