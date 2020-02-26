@@ -14,37 +14,28 @@ class Money {
    */
   equals(comparing){
     return this.amount === comparing.amount 
-      && this.constructor.name === comparing.constructor.name;
+      && this.currency() === comparing.currency();
   };
   currency(){
     return this.currency_type
   };
+  toString(){
+    return this.amount + " " + this.currency
+  }
+  /**
+   * multiply an amount (price per share) by a number (number of shares) and receive an amount
+   * @param {number} multiplier number of shares
+   */
+  times(multiplier){
+    return new Money(this.amount * multiplier, this.currency);
+  }
   static dollar(amount){
-    return new Dollar(amount, "USD")
+    return new Money(amount, "USD")
   };
   static franc(amount){
-    return new Franc(amount, "CHF")
+    return new Money(amount, "CHF")
   };
 }
 
-class Dollar extends Money {
-  /**
-   * multiply an amount (price per share) by a number (number of shares) and receive an amount
-   * @param {number} multiplier number of shares
-   */
-  times(multiplier){
-    return Money.dollar(this.amount * multiplier);
-  }
-}
 
-class Franc extends Money{
-  /**
-   * multiply an amount (price per share) by a number (number of shares) and receive an amount
-   * @param {number} multiplier number of shares
-   */
-  times(multiplier){
-    return Money.franc(this.amount * multiplier);
-  }
-}
-
-module.exports = {Money, Franc, Dollar};
+module.exports = {Money};

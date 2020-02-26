@@ -1,5 +1,5 @@
 const test = require('ava');
-const { Money, Dollar, Franc } = require('../src/money.js')
+const { Money} = require('../src/money.js')
 
 test('test currency', t => {
   let oneDollar = Money.dollar(1);
@@ -23,6 +23,10 @@ test('test multi-currency equality', t => {
 
 test('test multi-currency multiplication', t => {
   let fiveDollars = Money.dollar(5);
-  
-  t.deepEqual(Money.dollar(10), fiveDollars.times(2))
+  let result = fiveDollars.times(2)
+
+  t.true(result.amount === 10)
+  t.true(Money.dollar(10).amount === 10)
+  t.true(result.equals(fiveDollars.times(2)))
+  t.true(result.equals(Money.dollar(10)))
 })
