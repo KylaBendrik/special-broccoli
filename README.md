@@ -12,9 +12,11 @@ special-broccoli
     -   [Parameters](#parameters-1)
 -   [plus](#plus)
     -   [Parameters](#parameters-2)
+-   [exchange](#exchange)
+    -   [Parameters](#parameters-3)
 -   [toString](#tostring)
 -   [times](#times)
-    -   [Parameters](#parameters-3)
+    -   [Parameters](#parameters-4)
 
 ## constructor
 
@@ -42,6 +44,14 @@ Add together two currencies
 ### Parameters
 
 -   `addend` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+## exchange
+
+This takes one kind of Money and returns the equivalent Money in another kind of currency
+
+### Parameters
+
+-   `to` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the kind of currency you'd like to get (USD or CHF)
 
 ## toString
 
