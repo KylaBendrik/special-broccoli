@@ -6,26 +6,14 @@ special-broccoli
 
 ### Table of Contents
 
--   [constructor](#constructor)
-    -   [Parameters](#parameters)
 -   [times](#times)
-    -   [Parameters](#parameters-1)
--   [equals](#equals)
-    -   [Parameters](#parameters-2)
--   [constructor](#constructor-1)
-    -   [Parameters](#parameters-3)
+    -   [Parameters](#parameters)
 -   [times](#times-1)
-    -   [Parameters](#parameters-4)
--   [equals](#equals-1)
-    -   [Parameters](#parameters-5)
-
-## constructor
-
-This initializes a new Dollar object
-
-### Parameters
-
--   `input` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** input any integer (later may be floats?)
+    -   [Parameters](#parameters-1)
+-   [constructor](#constructor)
+    -   [Parameters](#parameters-2)
+-   [equals](#equals)
+    -   [Parameters](#parameters-3)
 
 ## times
 
@@ -35,23 +23,6 @@ multiply an amount (price per share) by a number (number of shares) and receive 
 
 -   `multiplier` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of shares
 
-## equals
-
-Two Dollar Objects should be equal if they have the same value
-
-### Parameters
-
--   `comparing` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `self` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-## constructor
-
-This initializes a new Franc object
-
-### Parameters
-
--   `input` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** input any integer (later may be floats?)
-
 ## times
 
 multiply an amount (price per share) by a number (number of shares) and receive an amount
@@ -60,9 +31,17 @@ multiply an amount (price per share) by a number (number of shares) and receive 
 
 -   `multiplier` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of shares
 
+## constructor
+
+This initializes a new Money object
+
+### Parameters
+
+-   `input` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** input any integer (later may be floats?)
+
 ## equals
 
-Two Franc Objects should be equal if they have the same value
+Two Money objects should be equal if they have the same value
 
 ### Parameters
 
