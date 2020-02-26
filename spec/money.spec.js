@@ -4,8 +4,8 @@ const { Money, Dollar, Franc } = require('../src/money.js')
 test('test currency', t => {
   let oneDollar = Money.dollar(1);
   let oneFranc = Money.franc(1);
-  t.deepEqual("USD", oneDollar.currency())
-  t.deepEqual("CHF", oneFranc.currency())
+  t.is("USD", oneDollar.currency())
+  t.is("CHF", oneFranc.currency())
 })
 
 test('test multi-currency equality', t => {

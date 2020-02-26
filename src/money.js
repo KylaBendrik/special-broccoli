@@ -3,9 +3,9 @@ class Money {
    * This initializes a new Money object
    * @param {number} input input any integer (later may be floats?)
    */
-  constructor(amount, currency){
+  constructor(amount, currency_type){
     this.amount = amount;
-    this.currency = currency;
+    this.currency_type = currency_type;
   }
   /**
    * Two Money objects should be equal if they have the same value
@@ -17,7 +17,7 @@ class Money {
       && this.constructor.name === comparing.constructor.name;
   };
   currency(){
-    return this.currency
+    return this.currency_type
   };
   static dollar(amount){
     return new Dollar(amount, "USD")
