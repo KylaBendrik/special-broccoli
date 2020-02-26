@@ -4,6 +4,7 @@ class Dollar {
    * @param {number} input input any integer (later may be floats?)
    */
   constructor(input) {
+    //private
     this.amount = input;
   }
   /**
@@ -12,6 +13,14 @@ class Dollar {
    */
   times(multiplier){
     return new Dollar(this.amount * multiplier);
+  }
+  /**
+   * Two Dollar Objects should be equal if they have the same value
+   * @param {object} self 
+   * @param {object} comparing 
+   */
+  equals(comparing){
+    return this.amount === comparing.amount
   }
 }
 
