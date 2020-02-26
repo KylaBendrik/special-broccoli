@@ -1,3 +1,12 @@
+const rates = {
+  "USD": {
+    "CHF": 2
+  },
+  "CHF": {
+    "USD": 0.5
+  }
+}
+
 class Money {
   /**
    * This initializes a new Money object
@@ -16,9 +25,27 @@ class Money {
     return this.amount === comparing.amount 
       && this.currency === comparing.currency;
   };
+  /**
+   * Add together two currencies
+   * @param {number} addend 
+   */
   plus(addend){
     return new Money(this.amount + addend.amount, this.currency)
   }
+  /**
+   * This takes one kind of Money and returns the equivalent Money in another kind of currency
+   * @param {string} to the kind of currency you'd like to get (USD or CHF)
+   */
+  exchange(to){
+    let result = this
+    if(this.currency != to){
+      result =  new Money(rates[this.currency][to] * this.amount, to)
+    }
+    return result
+  }
+  /**
+   * Nicely format the amount (10 USD, 15 CHF, etc)
+   */
   toString(){
     return this.amount + " " + this.currency
   }

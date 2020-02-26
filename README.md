@@ -10,9 +10,10 @@ special-broccoli
     -   [Parameters](#parameters)
 -   [equals](#equals)
     -   [Parameters](#parameters-1)
--   [times](#times)
+-   [plus](#plus)
     -   [Parameters](#parameters-2)
--   [times](#times-1)
+-   [toString](#tostring)
+-   [times](#times)
     -   [Parameters](#parameters-3)
 
 ## constructor
@@ -34,13 +35,17 @@ Two Money objects should be equal if they have the same value
 -   `comparing` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 -   `self` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## times
+## plus
 
-multiply an amount (price per share) by a number (number of shares) and receive an amount
+Add together two currencies
 
 ### Parameters
 
--   `multiplier` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of shares
+-   `addend` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+## toString
+
+Nicely format the amount (10 USD, 15 CHF, etc)
 
 ## times
 
