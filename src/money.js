@@ -3,8 +3,9 @@ class Money {
    * This initializes a new Money object
    * @param {number} input input any integer (later may be floats?)
    */
-  constructor(input){
-    this.amount = input;
+  constructor(amount, currency){
+    this.amount = amount;
+    this.currency = currency;
   }
   /**
    * Two Money objects should be equal if they have the same value
@@ -15,11 +16,14 @@ class Money {
     return this.amount === comparing.amount 
       && this.constructor.name === comparing.constructor.name;
   };
+  currency(){
+    return this.currency
+  };
   static dollar(amount){
-    return new Dollar(amount)
+    return new Dollar(amount, "USD")
   };
   static franc(amount){
-    return new Franc(amount)
+    return new Franc(amount, "CHF")
   };
 }
 
@@ -43,4 +47,4 @@ class Franc extends Money{
   }
 }
 
-module.exports = {Money};
+module.exports = {Money, Franc, Dollar};
