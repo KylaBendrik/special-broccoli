@@ -12,7 +12,34 @@ class Money {
    * @param {object} comparing 
    */
   equals(comparing){
-    return this.amount === comparing.amount
+    return this.amount === comparing.amount 
+      && this.constructor.name === comparing.constructor.name;
+  };
+  static dollar(amount){
+    return new Dollar(amount)
+  };
+  static franc(amount){
+    return new Franc(amount)
+  };
+}
+
+class Dollar extends Money {
+  /**
+   * multiply an amount (price per share) by a number (number of shares) and receive an amount
+   * @param {number} multiplier number of shares
+   */
+  times(multiplier){
+    return Money.dollar(this.amount * multiplier);
+  }
+}
+
+class Franc extends Money{
+  /**
+   * multiply an amount (price per share) by a number (number of shares) and receive an amount
+   * @param {number} multiplier number of shares
+   */
+  times(multiplier){
+    return Money.franc(this.amount * multiplier);
   }
 }
 
