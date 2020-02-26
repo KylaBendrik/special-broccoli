@@ -8,6 +8,8 @@ special-broccoli
 
 -   [constructor](#constructor)
     -   [Parameters](#parameters)
+-   [times](#times)
+    -   [Parameters](#parameters-1)
 
 ## constructor
 
@@ -15,4 +17,12 @@ This initializes a new Dollar object
 
 ### Parameters
 
--   `amount` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** input any integer (later may be floats?)
+-   `input` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** input any integer (later may be floats?)
+
+## times
+
+multiply an amount (price per share) by a number (number of shares) and receive an amount
+
+### Parameters
+
+-   `multiplier` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of shares

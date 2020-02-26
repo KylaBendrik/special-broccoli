@@ -1,5 +1,5 @@
 const test = require('ava');
-const Main = require('../src/main.js')
+const { Dollar } = require('../src/main.js')
 
 test('test multiplication', t => {
   let five = new Dollar(5);
