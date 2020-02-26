@@ -16,18 +16,21 @@ class Money {
     return this.amount === comparing.amount 
       && this.currency() === comparing.currency();
   };
+  plus(addend){
+    return new Money(this.amount + addend.amount, this.currency_type)
+  }
   currency(){
     return this.currency_type
   };
   toString(){
-    return this.amount + " " + this.currency
+    return this.amount + " " + this.currency()
   }
   /**
    * multiply an amount (price per share) by a number (number of shares) and receive an amount
    * @param {number} multiplier number of shares
    */
   times(multiplier){
-    return new Money(this.amount * multiplier, this.currency);
+    return new Money(this.amount * multiplier, this.currency_type);
   }
   static dollar(amount){
     return new Money(amount, "USD")
