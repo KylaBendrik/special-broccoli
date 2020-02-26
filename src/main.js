@@ -11,7 +11,7 @@ class Dollar {
    * @param {number} multiplier number of shares
    */
   times(multiplier){
-    this.amount = 10;
+    this.amount = this.amount * multiplier;
   }
 }
 
