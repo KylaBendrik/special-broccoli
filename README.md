@@ -64,3 +64,5 @@ multiply an amount (price per share) by a number (number of shares) and receive 
 ### Parameters
 
 -   `multiplier` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of shares
+
+# UnitTest
